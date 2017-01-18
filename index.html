@@ -22,7 +22,18 @@
     crossorigin="anonymous"></script>
   <script src="scripts/pnotify.custom.min.js"></script>
 
-<link href="styles.bundle.css" rel="stylesheet"/></head>
+<link href="styles.bundle.css" rel="stylesheet"/>
+<script>
+  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+  </head>
 
 <body>
   <div class="container" style="margin-top: 70px;">
