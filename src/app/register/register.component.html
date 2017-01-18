@@ -1,0 +1,15 @@
+<simple-notifications style="position: absolute; z-index: 3404560;" [options]="options"></simple-notifications>
+
+<div class="login-page">
+  <div class="form">
+    <div class="login-form">
+      <input type="text" [(ngModel)]="user.Name" placeholder="Name"/>
+      <input type="text" [(ngModel)]="user.Username" placeholder="Username"/>
+      <input type="text" [(ngModel)]="user.Password" placeholder="Password"/>
+      <select id=locationID>
+        <option *ngFor="let item of locations" value="{{item.LocationId}}">{{item.LocationName}}</option>
+      </select>
+      <button (click)="register()">Create</button>
+    </div>
+  </div>
+</div>

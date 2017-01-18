@@ -1,0 +1,34 @@
+<simple-notifications style="position: absolute; z-index: 3404560;" [options]="options"></simple-notifications>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+            <label for="LocationIDs" class="control-label">Location(s):</label>
+            <select id="LocationIDs" class="form-control">
+                <option *ngFor="let item of locations" value="{{item.LocationId}}">{{item.LocationName}}</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="form-group">
+                    <label for="inputLocationName" class="control-label">Price:</label>
+                    <input type="number" id="inputLocationName" class="form-control" [(ngModel)]="priceStock.Price" placeholder="Insert name">
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress" class="control-label">Stock:</label>
+                    <input type="number" id="inputAddress" class="form-control" [(ngModel)]="priceStock.Stock" placeholder="Insert address">
+                </div>                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+                <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+            </div>
+        </div>
+    </div>
+</div>

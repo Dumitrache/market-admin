@@ -1,0 +1,23 @@
+<simple-notifications style="position: absolute; z-index: 3404560;" [options]="options"></simple-notifications>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+            <label for="inputProductName" class="control-label">Product name:</label>
+            <input type="text" id="inputProductName" class="form-control"
+             [(ngModel)]="product.ProductName" placeholder="Insert name">
+        </div>
+        <div class="form-group">
+            <label for="inputProductDescription" class="control-label">Product description:</label>
+            <input type="text" id="inputProductDescription" class="form-control"
+             [(ngModel)]="product.ProductDescription" placeholder="Insert description">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+        <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+    </div>
+</div>

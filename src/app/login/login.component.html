@@ -1,0 +1,19 @@
+<simple-notifications style="position: absolute; z-index: 3404560;" [options]="options"></simple-notifications>
+
+<div class="login-page">
+  <div class="form">
+    <div class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password"  placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </div>
+    <div class="login-form">
+      <input type="text" [(ngModel)]="username" placeholder="username"/>
+      <input type="password" [(ngModel)]="password" placeholder="password"/>
+      <button (click)="login()">Login</button>
+      <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
+    </div>
+  </div>
+</div>

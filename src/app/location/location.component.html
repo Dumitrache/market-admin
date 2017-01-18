@@ -1,0 +1,33 @@
+<simple-notifications style="position: absolute; z-index: 3404560;" [options]="options"></simple-notifications>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+            <label for="inputLocationName" class="control-label">Location name:</label>
+            <input type="text" id="inputLocationName" class="form-control"
+             [(ngModel)]="locationModel.LocationName" placeholder="Insert name">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress" class="control-label">Location address:</label>
+            <input type="text" id="inputAddress" class="form-control"
+             [(ngModel)]="locationModel.LocationAdress" placeholder="Insert address">
+        </div>
+        <div class="form-group">
+            <label for="inputLocationLat" class="control-label">Location latitude:</label>
+            <input type="text" id="inputLocationLat" class="form-control"
+             [(ngModel)]="locationModel.LocationLat" placeholder="Insert latitude">
+        </div>
+        <div class="form-group">
+            <label for="inputLocationLng" class="control-label">Location longitude:</label>
+            <input type="text" id="inputLocationLng" class="form-control"
+             [(ngModel)]="locationModel.LocationLng" placeholder="Insert longitude">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+        <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+    </div>
+</div>
