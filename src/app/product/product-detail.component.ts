@@ -6,7 +6,6 @@ import { NotificationsService } from 'angular2-notifications';
 import { Location } from '../location/location';
 import { LocationService } from '../location/location.service';
 import { AuthService } from '../auth/auth.service';
-import { asEnumerable } from 'linq-es2015';
 import { UserType } from '../auth/user-output';
 
 
@@ -42,7 +41,7 @@ export class ProducDetailComponent implements OnInit {
             .subscribe(items => {
                 
                 if(this.authService.User.IsManager == UserType.IsNotManager){
-                    this.locations = asEnumerable(items).Where( x=> x.LocationId == this.authService.User.LocationId).ToArray();
+                    this.locations = [items.find( x => x.LocationId == this.authService.User.LocationId)];
                 }
                 else{
                     this.locations = items;
