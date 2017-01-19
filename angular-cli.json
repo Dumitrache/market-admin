@@ -18,9 +18,12 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.css",
+        "content/pnotify.custom.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "scripts/pnotify.custom.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
